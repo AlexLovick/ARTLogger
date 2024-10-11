@@ -3,6 +3,14 @@
   <groupId>aarcoding</groupId>
   <artifactId>tlogger</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  
+  <!-- Add dependencies here -->
+  
+  </dependencies>
+  
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>

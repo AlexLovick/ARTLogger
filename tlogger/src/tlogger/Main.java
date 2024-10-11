@@ -14,6 +14,7 @@ System.out.println("Sarah Just bought a great blender! that's right she's a sex 
 //Calls the input class
 //Input();
 DisplayUserList();
+TestLogFunc();
 
 }
 
@@ -74,29 +75,62 @@ public static void TestLogFunc(){
 
     //Define vars for test fields
     Integer testId; 
-    String testName,expectedResult,actualResult;
+    String testName,expectedResult,actualResult,Uans;
+    Boolean another = true;
 
 
     //UI object
     Scanner uI = new Scanner(System.in);
+    
+    
+    while (another == true) {
+    	
+    	//Inputs and outputs for entering the test
+        System.out.print("Log number: ");
+        testId = Integer.valueOf(uI.nextLine());
 
-    //Inputs and outputs for entering the test
-    System.out.println("Log number: ");
-    testId = Integer.valueOf(uI.nextLine());
+        System.out.print("\nTest Name: ");
+        testName = uI.nextLine();
 
-    System.out.println("Test Name: ");
-    testName = uI.nextLine();
+        System.out.print("\nExpected Result: ");
+        expectedResult = uI.nextLine();
 
-    System.out.println("Expected Result: ");
-    expectedResult = uI.nextLine();
+        System.out.print("\nActual Result: ");
 
-    System.out.println("Actual Result: ");
+        actualResult = uI.nextLine();
 
-    actualResult = uI.nextLine();
+        //Prints a concatanation of the inputted values
+        System.out.println(testId + " " + testName + " " + expectedResult + " " + actualResult+"\n");
+        
+        System.out.println("Would you like to add another test? y/n : ");
+        
+        Uans = uI.nextLine();
+        
+        if(Uans.toLowerCase() == "y") {
+        	
+        	another = true;
+        	
+        }
+        else {
+        	
+        	if(Uans.toLowerCase() == "n") {
+        		
+        		another = false;
+        		
+        	}
+        	else {
+        		
+        		System.out.println("Well suck it thats not 'y' or 'n' is it bitch boi");
+        	}
+        	
+        	
+        }
 
-    //Prints a concatanation of the inputted values
-    System.out.println(testId + " " + testName + " " + expectedResult + " " + actualResult);
+        
+        }
+        
 
+    
 }
 
 
